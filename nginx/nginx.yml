@@ -1,0 +1,24 @@
+---
+- hosts: webservers
+  remote_user: root
+  tasks:
+    - name: Install latest Nginx
+      yum:
+        name: nginx
+        state: latest
+    - name: Create index page
+      copy:
+        src: files/index.html
+        dest: /usr/share/nginx/html/index.html
+    - name: Start and Enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true
+    - name: Add http service in firewalld
+      firewalld:
+        zone: public
+        service: http
+        permanent: yes
+        state: enabled
+        immediate: yes

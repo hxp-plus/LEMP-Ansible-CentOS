@@ -1,0 +1,19 @@
+- name: Ensure firewalld is started
+  service: 
+    name: firewalld
+    state: started
+    enabled: true
+- name: Add http service in firewalld
+  firewalld:
+    zone: public
+    service: http
+    permanent: yes
+    state: enabled
+    immediate: yes
+- name: Add https service in firewalld
+  firewalld:
+    zone: public
+    service: https
+    permanent: yes
+    state: enabled
+    immediate: yes

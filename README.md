@@ -8,5 +8,5 @@ Change `hosts` and variable `domain_name` in `nginx.yml` to your server ip and d
 
 ```
 cd nginx
-ansible-playbook nginx.yml -i hosts
+ansible-playbook site.yml -i hosts
 ```

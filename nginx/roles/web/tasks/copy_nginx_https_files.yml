@@ -1,3 +1,0 @@
-- name: Add https nginx configuration
-  template: src=nginx.https.conf.j2 dest=/etc/nginx/conf.d/{{ domain_name }}.https.conf owner=nginx group=nginx mode=0644
-  notify: restart nginx

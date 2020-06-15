@@ -1,0 +1,13 @@
+- name: Install latest Cockpit
+  yum:
+    name: 
+      - storaged
+      - cockpit
+      - cockpit-storaged
+      - pcp
+    state: latest
+- name: Start and Enable Cockpit
+  service:
+    name: cockpit
+    state: started
+    enabled: true

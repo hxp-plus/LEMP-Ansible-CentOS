@@ -1,0 +1,30 @@
+- name: Make sure epel is enabled
+  yum:
+    name:
+      - epel-release
+    state: present
+- name: Install php-json php-gd GraphicsMagick
+  yum:
+    name: 
+      - php-json
+      - php-gd
+      - GraphicsMagick
+    state: latest
+  notify: restart php-fpm
+- name: install the RPM Fusion repo
+  yum:
+    name: https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+    state: present
+- name: install libSDL2
+  yum:
+    name: https://rpmfind.net/linux/centos/8-stream/PowerTools/x86_64/os/Packages/SDL2-2.0.10-2.el8.x86_64.rpm
+    state: present
+- name: install ffmpeg
+  yum:
+    name: ffmpeg
+    state: latest
+- name: Download h5ai and unarchive
+  unarchive:
+    src: https://release.larsjung.de/h5ai/h5ai-0.29.2.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes

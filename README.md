@@ -1,12 +1,26 @@
 # ansible-example
 
-# nginx_ssl_php_cockpit_h5ai
+# Deploy Server with php h5ai cockpit and nginx with https Automatically
 
-Deploy the latest nginx and use acme.sh to issue cert, and toggling ssl for nginx.
+## Requirements
 
-Change `hosts` and variable `domain_name` in `group_vars` to your server ip and domain name.
+- CentOS 8.x
+- Latest Ansible installed
+
+Edit `hosts` and variables in `group_vars/webservers`
+
+in `hosts`
+
+Change the ip to your server ip
+
+in `group_vars`
+
+Change `domain_name` to your server's domain name
+
+Change `cockpit_username` and `cockpit_pwd`
+
+Then, fire:
 
 ```
-cd nginx_ssl_php_cockpit_h5ai
 ansible-playbook site.yml -i hosts
 ```

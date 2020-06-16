@@ -11,5 +11,8 @@
     apache: "group ="
     nginx: "group = nginx"
   notify: "restart web services"
-
-    
+- name: Add php nginx config file
+  template:
+    src: php.conf.j2
+    dest: /etc/nginx/default.d/php.conf
+  notify: "restart web services"

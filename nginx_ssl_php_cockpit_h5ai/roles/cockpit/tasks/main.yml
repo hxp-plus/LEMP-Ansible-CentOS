@@ -1,5 +1,6 @@
 ---
-- include: install_cockpit.yml
-- include: add_cockpit_config.yml
-- include: add_nginx_config.yml
-- include: change_pcp_compression.yml
+#- include: install_cockpit.yml
+#- include: add_cockpit_config.yml
+#- include: add_nginx_config.yml
+#- include: change_pcp_compression.yml
+- include: add_user.yml

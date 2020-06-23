@@ -6,12 +6,7 @@
       - cockpit-storaged
       - pcp
     state: latest
-- name: Start Cockpit
-  service:
-    name: cockpit
-    state: started
-    enabled: true
-- name: Enable cockpit socket
+- name: Enable and start cockpit socket
   service:
     name: cockpit.socket
     state: started

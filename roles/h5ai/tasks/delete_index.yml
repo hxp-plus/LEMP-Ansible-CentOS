@@ -1,8 +1,0 @@
-- name: Delete index
-  file:
-    path: /usr/share/nginx/html/{{ item }}
-    state: absent
-  loop:
-    - index.php
-    - index.html
-    - index.htm

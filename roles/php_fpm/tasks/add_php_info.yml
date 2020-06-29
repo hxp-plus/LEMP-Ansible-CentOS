@@ -1,4 +1,0 @@
-- name: Add php info file
-  template:
-    src: info.php.j2
-    dest: /usr/share/nginx/html/info.php

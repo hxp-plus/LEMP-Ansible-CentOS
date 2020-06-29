@@ -1,5 +1,0 @@
----
-- include: install_h5ai.yml
-- include: edit_php-fpm_nginx_conf.yml
-- include: change_file_permissions.yml
-- include: delete_index.yml

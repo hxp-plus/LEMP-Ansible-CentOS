@@ -1,7 +1,0 @@
-- name: Change pcp compression behaviour
-  lineinfile:
-    path: /etc/pcp/pmlogger/control
-    regexp: '^#$PCP_COMPRESSAFTER=never'
-    line: '$PCP_COMPRESSAFTER=never'
-
-    

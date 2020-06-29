@@ -1,5 +1,0 @@
-- name: Add user admin
-  user:
-    name: "{{ cockpit_username }}"
-    password: "{{ cockpit_pwd | password_hash('sha512') }}"
-    state: present 

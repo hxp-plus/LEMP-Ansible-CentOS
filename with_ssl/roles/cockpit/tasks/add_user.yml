@@ -1,4 +1,4 @@
-- name: Add user admin
+- name: Add a non-sudoable user {{ cockpit_username }}
   user:
     name: "{{ cockpit_username }}"
     password: "{{ cockpit_pwd | password_hash('sha512') }}"

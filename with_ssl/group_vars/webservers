@@ -1,4 +1,6 @@
 ---
 domain_name: bot.hxp.plus
-cockpit_username: admin
-cockpit_pwd: admin
+cockpit_username: cockpit
+cockpit_pwd: cockpit
+mariadb_username: mariadb
+mariadb_pwd: mariadb

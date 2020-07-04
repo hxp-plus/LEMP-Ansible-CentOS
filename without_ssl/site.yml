@@ -6,6 +6,7 @@
     - nginx_without_ssl
     - php_fpm
     - cockpit
+    - mariadb
     
     
     

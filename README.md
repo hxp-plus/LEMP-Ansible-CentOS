@@ -5,7 +5,6 @@
 ## Requirements
 
 - CentOS 8.x
-- Latest Ansible installed
 
 # with_ssl version
 
@@ -15,6 +14,7 @@ include
 - cockpit
 - php
 - h5ai
+- mariadb
 
 will install the stuffs above and issue cert according to your domain with acme.sh, install cert to nginx automatically, and configure cockpit reverse proxy.
 
@@ -32,6 +32,8 @@ Change `domain_name` to your server's domain name.
 
 Change `cockpit_username` and `cockpit_pwd`
 
+Change `mariadb_username` and `mariadb_pwd`
+
 Then, fire:
 
 ```
@@ -45,6 +47,7 @@ include
 - nginx
 - cockpit
 - php
+- mariadb
 
 will install the stuffs above and configure cockpit reverse proxy.
 
@@ -61,6 +64,8 @@ in `group_vars/webservers`
 Change `domain_name` to your server's ip.
 
 Change `cockpit_username` and `cockpit_pwd`
+
+Change `mariadb_username` and `mariadb_pwd`
 
 Then, fire:
 

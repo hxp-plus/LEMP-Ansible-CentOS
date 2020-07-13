@@ -78,6 +78,4 @@ Then, fire:
 cd without_ssl
 ansible-playbook site.yml -i hosts
 ```
-# in case if you want to deploy v2ray
-<https://github.com/hxp-plus/Nginx-Config/tree/master/hxp-us-server/v2ray>
 

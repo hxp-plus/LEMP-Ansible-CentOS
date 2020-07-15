@@ -1,0 +1,5 @@
+- name: install qbittorrent-nox
+  yum:
+    name: 
+      - qbittorrent-nox
+    state: latest

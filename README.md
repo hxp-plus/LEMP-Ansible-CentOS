@@ -44,7 +44,7 @@ cd with_ssl
 ansible-playbook site.yml -i hosts
 ```
 
-# without_ssl
+# without_ssl (Will not be updated)
 
 include
 - nginx

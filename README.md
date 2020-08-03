@@ -77,5 +77,9 @@ Then, fire:
 ```
 cd without_ssl
 ansible-playbook site.yml -i hosts
+
+### TODO
+
+- Use git to install acme.sh in advanced mode and add email parameter.
 ```
 

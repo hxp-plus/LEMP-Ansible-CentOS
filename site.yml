@@ -3,15 +3,16 @@
   hosts: webservers
   remote_user: root
   roles:
-    #- nginx_with_ssl
-    #- php_fpm
-    #- cockpit
-    #- h5ai
-    #- mariadb
+    - nginx_with_ssl
+    - php_fpm
+    - cockpit
+    - h5ai
+    - mariadb
     - qbittorrent
-    
-    
-    
-    
-    
-    
+  pre_tasks:
+    - name: check if the system is yum-based
+      debug:
+        msg: "Error: non-yum based system"
+      when: "ansible_pkg_mgr != 'dnf'"
+      failed_when: "ansible_pkg_mgr != 'dnf'"
+      any_errors_fatal: true

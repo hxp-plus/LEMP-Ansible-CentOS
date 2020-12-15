@@ -2,7 +2,5 @@
 - include: install_nginx.yml
 - include: copy_nginx_conf_files.yml
 - include: copy_nginx_http_files.yml
-- include: install_acmesh.yml
-- include: issue_cert.yml
-- include: copy_nginx_https_files.yml
 - include: configure_firewalld.yml
+- include: issue_cert.yml

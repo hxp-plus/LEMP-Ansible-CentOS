@@ -11,6 +11,13 @@
     apache: "group ="
     nginx: "group = nginx"
   notify: "restart web services"
+- name: Create directory default.d
+  file:
+    path: /etc/nginx/default.d
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
 - name: Add php nginx config file
   template:
     src: php.conf.j2

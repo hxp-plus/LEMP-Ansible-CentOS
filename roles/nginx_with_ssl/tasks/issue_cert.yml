@@ -1,12 +1,10 @@
-- name: Create directory for certs
-  file:
-    path: /etc/pki/nginx/{{ domain_name }}
-    state: directory
-    mode: '0755'
-- name: Issue cert
-  shell:
-    cmd: /root/.acme.sh/acme.sh --issue -d {{ domain_name }} --nginx
-  register: out
-  failed_when: out.rc != 0 and 'Skip' not in out.stdout
-- name: Install cert
-  shell: /root/.acme.sh/acme.sh --install-cert -d {{ domain_name }} --key-file /etc/pki/nginx/{{ domain_name }}/key.pem --fullchain-file /etc/pki/nginx/{{ domain_name }}/cert.pem
+- name: Install certbot
+  yum:
+    name: python3-certbot-nginx
+    state: present
+
+- name: Create and Install Cert Using nginx Plugin
+  command: "certbot --nginx -d  {{ domain_name }} -m {{ certbot_mail_address }} --agree-tos --noninteractive --redirect"
+
+- name: Set Letsencrypt Cronjob for Certificate Auto Renewal
+  cron: name=letsencrypt_renewal special_time=monthly job="/usr/bin/certbot renew"

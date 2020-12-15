@@ -4,14 +4,14 @@
     state: started
     enabled: true
 - name: Add http service in firewalld
-  firewalld:
+  ansible.posix.firewalld:
     zone: public
     service: http
     permanent: yes
     state: enabled
     immediate: yes
 - name: Add https service in firewalld
-  firewalld:
+  ansible.posix.firewalld:
     zone: public
     service: https
     permanent: yes

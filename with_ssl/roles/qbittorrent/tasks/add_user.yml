@@ -1,5 +1,0 @@
-- name: Add a non-sudoable user {{ qbittorrent_username }}
-  user:
-    name: "{{ qbittorrent_username }}"
-    password: "{{ qbittorrent_pwd | password_hash('sha512') }}"
-    state: present 

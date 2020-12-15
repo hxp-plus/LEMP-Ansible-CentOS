@@ -1,4 +1,0 @@
----
-- include: install_mariadb.yml
-- include: add_user.yml
-- include: add_test_files.yml

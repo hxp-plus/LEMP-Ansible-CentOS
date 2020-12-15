@@ -1,5 +1,0 @@
-- name: Add Cockpit config file
-  template:
-    src: cockpit.conf.j2
-    dest: /etc/cockpit/cockpit.conf
-  notify: restart cockpit

@@ -1,9 +1,0 @@
-- name: Edit php-fpm nginx conf file
-  lineinfile:
-    path: /etc/nginx/default.d/php.conf
-    regexp: 'index index.php index.html index.htm;'
-    line: 'index index.php index.html index.htm /_h5ai/public/index.php;'
-  notify:
-    - restart nginx
-
-    

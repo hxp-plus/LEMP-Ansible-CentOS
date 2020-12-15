@@ -1,5 +1,0 @@
-- name: Add qbittorrent nginx config file
-  template:
-    src: qbittorrent-nginx.conf.j2
-    dest: /etc/nginx/default.d/qbittorrent.conf
-  notify: restart nginx

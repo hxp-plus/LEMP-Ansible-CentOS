@@ -1,6 +1,0 @@
----
-domain_name: 47.75.182.230
-cockpit_username: cockpit
-cockpit_pwd: cockpit
-mariadb_username: mariadb
-mariadb_pwd: mariadb

@@ -1,0 +1,6 @@
+---
+- include: install_qbittorrent.yml
+- include: add_user.yml
+- include: add_qbittorrent_systemctl.yml
+- include: enable_qbittorrent.yml
+- include: add_nginx_config.yml

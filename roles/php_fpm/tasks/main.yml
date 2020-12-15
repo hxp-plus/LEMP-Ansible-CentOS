@@ -1,0 +1,4 @@
+---
+- include: install_php_fpm.yml
+- include: edit_php_config.yml
+- include: add_php_info.yml

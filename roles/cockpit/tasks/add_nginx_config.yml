@@ -1,0 +1,5 @@
+- name: Add cockpit nginx config file
+  template:
+    src: cockpit-https.conf.j2
+    dest: /etc/nginx/default.d/cockpit.conf
+  notify: restart nginx

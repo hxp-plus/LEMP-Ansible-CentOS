@@ -1,0 +1,22 @@
+<?php
+$servername = "localhost";
+$username = "{{ mariadb_username }}";
+$password = "{{ mariadb_pwd }}";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Drop database
+$sql = "DROP DATABASE testDB";
+if ($conn->query($sql) === TRUE) {
+  echo "Database testDB deleted successfully";
+} else {
+  echo "Error deleting database: " . $conn->error;
+}
+
+$conn->close();
+?>

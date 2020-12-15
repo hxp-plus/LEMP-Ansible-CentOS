@@ -1,0 +1,17 @@
+---
+- name: Install nginx with ssl and php-fpm
+  hosts: webservers
+  remote_user: root
+  roles:
+    #- nginx_with_ssl
+    #- php_fpm
+    #- cockpit
+    #- h5ai
+    #- mariadb
+    - qbittorrent
+    
+    
+    
+    
+    
+    

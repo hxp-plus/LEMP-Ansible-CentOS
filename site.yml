@@ -12,7 +12,6 @@
   pre_tasks:
     - name: check if the system is yum-based
       debug:
-        msg: "Error: non-yum based system"
-      when: "ansible_pkg_mgr != 'dnf'"
+        msg: "Host {{ inventory_hostname}} is yum-based"
       failed_when: "ansible_pkg_mgr != 'dnf'"
       any_errors_fatal: true

@@ -5,5 +5,5 @@ mariadb_username: mariadb
 mariadb_pwd: mariadb
 qbittorrent_username: qbittorrent
 qbittorrent_pwd: qbittorrent
-domain_name: ru.thehxpfederation.xyz
+domain_name: server.hxp.plus
 certbot_mail_address: hxp201406@gmail.com

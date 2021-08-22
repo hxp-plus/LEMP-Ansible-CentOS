@@ -72,14 +72,21 @@ Change `cockpit_username` and `cockpit_pwd`
 
 Change `mariadb_username` and `mariadb_pwd`
 
+You may generate password with
+
+```bash
+</dev/urandom tr -dc 'A-Za-z0-9@#$%&_+=' | head -c16;echo
+```
+
 Then, fire:
 
 ```
 cd without_ssl
 ansible-playbook site.yml -i hosts
+```
 
 ### TODO
 
 - Use git to install acme.sh in advanced mode and add email parameter.
-```
+
 

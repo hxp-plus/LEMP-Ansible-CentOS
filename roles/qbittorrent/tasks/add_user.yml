@@ -2,4 +2,5 @@
   user:
     name: "{{ qbittorrent_username }}"
     password: "{{ qbittorrent_pwd | password_hash('sha512') }}"
+    shell: "/sbin/nologin"
     state: present 

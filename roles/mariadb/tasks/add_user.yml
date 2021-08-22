@@ -2,6 +2,7 @@
   user:
     name: "{{ mariadb_username }}"
     password: "{{ mariadb_pwd | password_hash('sha512') }}"
+    shell: "/sbin/nologin"
     state: present 
 - name: change db password of user {{ mariadb_username }}
   mysql_user:

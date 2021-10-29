@@ -5,5 +5,5 @@ mariadb_username: mariadb
 mariadb_pwd: aa03d3f1-1342-412c-84de-4efa56b52777
 qbittorrent_username: qbittorrent
 qbittorrent_pwd: a4328048-9532-4b13-9b8c-ce95bbc5b0c4
-domain_name: server.hxp.plus
+domain_name: vultr.hxp.plus
 certbot_mail_address: hxp201406@gmail.com

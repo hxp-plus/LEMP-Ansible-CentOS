@@ -18,7 +18,7 @@
     disable_gpg_check: yes
 - name: install libSDL2
   yum:
-    name: https://rpmfind.net/linux/centos/8-stream/PowerTools/x86_64/os/Packages/SDL2-2.0.10-2.el8.x86_64.rpm
+    name: SDL2
     state: present
 - name: install ffmpeg
   yum:
